@@ -33,16 +33,19 @@ class SignInView: UIView, SignInViewDelegate {
     }
     
     func checkFields() -> Bool {
-        var checked: Bool
-        if emailTextField.text != nil &&
-            !emailTextField.text?.isEmpty ?? <#default value#> &&
-           passwordTextField.text != nil &&
-           !passwordTextField.text?.isEmpty {
-            
-            checked = true
-        } else {
-                checked = false
-                print("Password is empty !")
+        var checked: Bool = true
+        
+        guard let checkedUser = RegisterUser.instance.user else {
+            print("Please register first")
+            return false
+        }
+        let emailUnwrapped: String = emailTextField.text ?? ""
+        let passwordUnwrapped: String = passwordTextField.text ?? ""
+    
+        if (emailUnwrapped == "" || passwordUnwrapped == "" || emailUnwrapped != checkedUser.email || passwordUnwrapped != checkedUser.password) {
+            print("Unable to find a match with this pair of email/password !")
+            checked = false
+        }
         return checked
     }
 }

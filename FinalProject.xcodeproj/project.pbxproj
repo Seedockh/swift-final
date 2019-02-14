@@ -24,6 +24,7 @@
 		62FECC78221578B200BA590A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC77221578B200BA590A /* ProfilView.swift */; };
 		62FECC7A22157A5A00BA590A /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC7922157A5A00BA590A /* RegisterUser.swift */; };
 		62FECC7C22157B6C00BA590A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC7B22157B6C00BA590A /* User.swift */; };
+		62FECC7E2215AE0A00BA590A /* ProfilViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		62FECC77221578B200BA590A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		62FECC7922157A5A00BA590A /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		62FECC7B22157B6C00BA590A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				62FECC77221578B200BA590A /* ProfilView.swift */,
 				62FECC7922157A5A00BA590A /* RegisterUser.swift */,
 				62FECC7B22157B6C00BA590A /* User.swift */,
+				62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				62FECC73221552EC00BA590A /* SignUpViewDelegate.swift in Sources */,
 				62FECC7C22157B6C00BA590A /* User.swift in Sources */,
 				62FECC6B22154F3200BA590A /* SignInView.swift in Sources */,
+				62FECC7E2215AE0A00BA590A /* ProfilViewDelegate.swift in Sources */,
 				62FECC3922154D9D00BA590A /* AppDelegate.swift in Sources */,
 				62FECC71221552D200BA590A /* SignInViewDelegate.swift in Sources */,
 			);

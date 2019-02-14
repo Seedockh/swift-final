@@ -1,68 +1,73 @@
 import UIKit
 
-class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDelegate {
+class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDelegate, ProfilViewDelegate {
     
     @IBOutlet weak var signInView: SignInView!
     @IBOutlet weak var signUpView: SignUpView!
+    @IBOutlet weak var profilView: ProfilView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signInView.delegate = self
         signUpView.delegate = self
+        profilView.delegate = self
     }
     
     func goToLogin() {
         signUpView.isHidden = true
         signInView.isHidden = false
+        profilView.isHidden = true
     }
     
     func goToRegister() {
         signUpView.isHidden = false
         signInView.isHidden = true
+        profilView.isHidden = true
     }
+    
+    func goToProfile() {
+        signInView.isHidden = true
+        signUpView.isHidden = true
+        profilView.isHidden = false
+    }
+    
     
     func login(email: String, password: String) {
         print("\(email) - \(password)")
     }
     
     func register() {
-        guard let email = signUpView.emailTextField.text else { }
-        guard let password = signUpView.passwordTextField.text else { }
-        guard let confirmPassword = signUpView.confirmPasswordTextField.text else { return }
-        
-        //print("\(email) - \(password) - \(confirmPassword)")
-        
-        if (email != "" && password != "" && confirmPassword != "" && password == confirmPassword) {
-            signUpView.goToLogin()
-            
+        if signUpView.checkFields() {
+            let email = signUpView.emailTextField.text!
+            let password = signUpView.passwordTextField.text!
             let user: User = User(email: email, password: password)
             RegisterUser.instance.register(user: user)
             print("Successful sign up !")
-        } else {
-            print("Email or password invalid !")
+            signUpView.goToLogin()
         }
     }
     
     func login() {
-        guard let email = signInView.emailTextField.text else { return }
-        guard let password = signInView.passwordTextField.text else { return }
-        guard let checkedEmail = RegisterUser.instance.user?.email else {
-            print("Please register first")
-            return
-        }
-        guard let checkedPassword = RegisterUser.instance.user?.password else {
-            print("Please register first")
-            return
-        }
-        
-        print(checkedEmail)
-        print(checkedPassword)
-        
-        if (email == checkedEmail && password == checkedPassword) {
+        if signInView.checkFields() {
             print("Successful login")
-        } else {
-            print("Unable to find a match with this pair of email/password !")
+            goToProfile()
         }
-        
+    }
+
+    func changePassword() {
+        if profilView.checkFields() {
+            if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password
+                print("New password isn't really new, is it...")
+            } else {
+                RegisterUser.instance.user?.password = profilView.newPasswordTextField.text!
+                print("Password change is a success")
+            }
+            profilView.newPasswordTextField.text = ""
+            profilView.confirmNewPasswordTextField.text = ""
+        }
+    }
+    
+    func logout() {
+        goToLogin()
     }
 }
