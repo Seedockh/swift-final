@@ -22,6 +22,8 @@
 		62FECC73221552EC00BA590A /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC72221552EC00BA590A /* SignUpViewDelegate.swift */; };
 		62FECC75221577EA00BA590A /* ProfilView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62FECC74221577EA00BA590A /* ProfilView.xib */; };
 		62FECC78221578B200BA590A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC77221578B200BA590A /* ProfilView.swift */; };
+		62FECC7A22157A5A00BA590A /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC7922157A5A00BA590A /* RegisterUser.swift */; };
+		62FECC7C22157B6C00BA590A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC7B22157B6C00BA590A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		62FECC74221577EA00BA590A /* ProfilView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilView.xib; sourceTree = "<group>"; };
 		62FECC762215787100BA590A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62FECC77221578B200BA590A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		62FECC7922157A5A00BA590A /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		62FECC7B22157B6C00BA590A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				62FECC72221552EC00BA590A /* SignUpViewDelegate.swift */,
 				62FECC74221577EA00BA590A /* ProfilView.xib */,
 				62FECC77221578B200BA590A /* ProfilView.swift */,
+				62FECC7922157A5A00BA590A /* RegisterUser.swift */,
+				62FECC7B22157B6C00BA590A /* User.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -286,9 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				62FECC6722154E2F00BA590A /* LoginViewController.swift in Sources */,
+				62FECC7A22157A5A00BA590A /* RegisterUser.swift in Sources */,
 				62FECC78221578B200BA590A /* ProfilView.swift in Sources */,
 				62FECC6F22154FB600BA590A /* SignUpView.swift in Sources */,
 				62FECC73221552EC00BA590A /* SignUpViewDelegate.swift in Sources */,
+				62FECC7C22157B6C00BA590A /* User.swift in Sources */,
 				62FECC6B22154F3200BA590A /* SignInView.swift in Sources */,
 				62FECC3922154D9D00BA590A /* AppDelegate.swift in Sources */,
 				62FECC71221552D200BA590A /* SignInViewDelegate.swift in Sources */,

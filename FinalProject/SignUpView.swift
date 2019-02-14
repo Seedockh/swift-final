@@ -1,7 +1,11 @@
 import UIKit
 
-class SignUpView: UIView, SignUpViewDelegate {
+class SignUpView: UIView, SignUpViewDelegate {  
     @IBOutlet weak var signUpView: UIView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     
     var delegate: SignUpViewDelegate?
     
@@ -24,5 +28,9 @@ class SignUpView: UIView, SignUpViewDelegate {
     
     @IBAction func goToLogin() {
         delegate?.goToLogin()
+    }
+    
+    @IBAction func register() {
+        delegate?.register()
     }
 }

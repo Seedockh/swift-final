@@ -2,6 +2,8 @@ import UIKit
 
 class SignInView: UIView, SignInViewDelegate {
     @IBOutlet weak var signInView: UIView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     var delegate: SignInViewDelegate?
     
@@ -24,5 +26,23 @@ class SignInView: UIView, SignInViewDelegate {
 
     @IBAction func goToRegister() {
         delegate?.goToRegister()
+    }
+    
+    @IBAction func login() {
+        delegate?.login()
+    }
+    
+    func checkFields() -> Bool {
+        var checked: Bool
+        if emailTextField.text != nil &&
+            !emailTextField.text?.isEmpty ?? <#default value#> &&
+           passwordTextField.text != nil &&
+           !passwordTextField.text?.isEmpty {
+            
+            checked = true
+        } else {
+                checked = false
+                print("Password is empty !")
+        return checked
     }
 }

@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpView" customModule="FinalProject" customModuleProvider="target">
             <connections>
+                <outlet property="confirmPasswordTextField" destination="3kg-to-N2s" id="g1N-Sc-HJ7"/>
+                <outlet property="emailTextField" destination="iwj-9v-D9e" id="0Md-MB-IR6"/>
+                <outlet property="passwordTextField" destination="wZI-9K-xci" id="Wly-Dy-5yJ"/>
                 <outlet property="signUpView" destination="iN0-l3-epB" id="t9q-8l-1ef"/>
             </connections>
         </placeholder>
@@ -68,6 +71,9 @@
                     <state key="normal" title="Sign Up">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="register" destination="-2" eventType="touchUpInside" id="PfM-0n-VVa"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPP-ng-Ra2">
                     <rect key="frame" x="16" y="354" width="343" height="40"/>
