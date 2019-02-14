@@ -4,6 +4,7 @@ class ProfilView: UIView {
     @IBOutlet weak var profilView: UIView!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmNewPasswordTextField: UITextField!
+    @IBOutlet weak var emailDisplay: UILabel!
     
     var delegate: ProfilViewDelegate?
     
@@ -23,8 +24,13 @@ class ProfilView: UIView {
         profilView.frame = self.bounds
         profilView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    
+    func displayEmail() {
+        emailDisplay.text = RegisterUser.instance.user?.email
+        print(emailDisplay)
+    }
 
-    func goToProfile() {
+    func goToProfile(_ sender: UIButton) {
         delegate?.goToProfile()
     }
     

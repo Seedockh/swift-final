@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfilView" customModule="FinalProject" customModuleProvider="target">
             <connections>
                 <outlet property="confirmNewPasswordTextField" destination="Dws-f3-VWc" id="ZQM-A3-AEh"/>
+                <outlet property="emailDisplay" destination="tRm-hj-mjo" id="VYr-x3-mGE"/>
                 <outlet property="newPasswordTextField" destination="zRQ-zb-WpC" id="5Af-fD-RAF"/>
                 <outlet property="profilView" destination="iN0-l3-epB" id="kot-5J-iJZ"/>
             </connections>
@@ -28,8 +29,8 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHI-eS-agP">
-                    <rect key="frame" x="16" y="36" width="343" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHI-eS-agP">
+                    <rect key="frame" x="16" y="36" width="163.5" height="21"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -77,32 +78,48 @@
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRm-hj-mjo">
+                    <rect key="frame" x="195.5" y="36" width="163.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0FX-qs-CWd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCo-M6-tyo" secondAttribute="trailing" constant="16" id="1m3-Nw-oyg"/>
                 <constraint firstItem="s4L-fR-cFG" firstAttribute="top" secondItem="PW5-F0-065" secondAttribute="bottom" constant="16" id="3Bh-Se-9PL"/>
+                <constraint firstItem="tRm-hj-mjo" firstAttribute="width" secondItem="OHI-eS-agP" secondAttribute="width" id="3Wy-JU-yIa"/>
                 <constraint firstItem="s4L-fR-cFG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6aM-DN-JT9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dws-f3-VWc" secondAttribute="trailing" constant="16" id="7G4-xp-HMK"/>
+                <constraint firstItem="zRQ-zb-WpC" firstAttribute="top" secondItem="lCo-M6-tyo" secondAttribute="bottom" constant="2" id="7Mn-kK-vDf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BRS-du-jKf" secondAttribute="trailing" constant="16" id="AZv-ZI-u8E"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PW5-F0-065" secondAttribute="trailing" constant="16" id="Cz0-P1-58O"/>
+                <constraint firstItem="OHI-eS-agP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ECk-is-LCS"/>
                 <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Iiq-4u-CTs"/>
+                <constraint firstItem="tRm-hj-mjo" firstAttribute="leading" secondItem="OHI-eS-agP" secondAttribute="trailing" constant="16" id="Khc-zB-Nhc"/>
                 <constraint firstItem="zRQ-zb-WpC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LxC-ug-g1p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tRm-hj-mjo" secondAttribute="trailing" constant="16" id="MCT-E5-CSb"/>
                 <constraint firstItem="BRS-du-jKf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PJQ-XX-KYg"/>
                 <constraint firstItem="Dws-f3-VWc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Q1y-GO-Crr"/>
                 <constraint firstItem="OHI-eS-agP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="aJt-5V-hgY"/>
                 <constraint firstItem="Dws-f3-VWc" firstAttribute="top" secondItem="BRS-du-jKf" secondAttribute="bottom" constant="2" id="fbb-Lq-4mR"/>
+                <constraint firstItem="tRm-hj-mjo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="gwd-7R-Y8h"/>
                 <constraint firstItem="PW5-F0-065" firstAttribute="top" secondItem="Dws-f3-VWc" secondAttribute="bottom" constant="32" id="hQZ-fO-XsZ"/>
-                <constraint firstItem="lCo-M6-tyo" firstAttribute="top" secondItem="OHI-eS-agP" secondAttribute="bottom" constant="32" id="hjx-HK-DpQ"/>
+                <constraint firstItem="tRm-hj-mjo" firstAttribute="height" secondItem="OHI-eS-agP" secondAttribute="height" id="mdI-Li-iG8"/>
                 <constraint firstItem="BRS-du-jKf" firstAttribute="top" secondItem="zRQ-zb-WpC" secondAttribute="bottom" constant="16" id="mdf-fN-4aB"/>
                 <constraint firstItem="PW5-F0-065" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="n3r-tc-esq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OHI-eS-agP" secondAttribute="trailing" constant="16" id="r3r-hl-LIY"/>
                 <constraint firstItem="OHI-eS-agP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rFf-Dz-MUB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCo-M6-tyo" secondAttribute="trailing" constant="16" id="rrg-sz-GFT"/>
                 <constraint firstItem="zRQ-zb-WpC" firstAttribute="top" secondItem="lCo-M6-tyo" secondAttribute="bottom" constant="2" id="sv9-Go-tbM"/>
+                <constraint firstItem="lCo-M6-tyo" firstAttribute="top" secondItem="OHI-eS-agP" secondAttribute="bottom" constant="32" id="uRq-Bm-Wt8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zRQ-zb-WpC" secondAttribute="trailing" constant="16" id="uz6-gz-S9M"/>
+                <constraint firstItem="OHI-eS-agP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wjA-Dx-nbd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s4L-fR-cFG" secondAttribute="trailing" constant="16" id="zFP-ri-rYB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="69.599999999999994" y="53.523238380809602"/>
         </view>
     </objects>
 </document>

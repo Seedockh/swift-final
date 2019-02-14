@@ -8,7 +8,4 @@ class RegisterUser {
         self.user = user
     }
 }
-/*
-print(RegisterUser.instance.email)
-RegisterUser.instance.register(email: "john@jack.fr", password: "john")
- */
+
