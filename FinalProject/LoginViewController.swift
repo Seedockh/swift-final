@@ -44,14 +44,14 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
             let password = signUpView.passwordTextField.text!
             let user: User = User(email: email, password: password)
             RegisterUser.instance.register(user: user)
-            successLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
+            //successLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
             signUpView.goToLogin()
         }
     }
     
     func login() {
         if signInView.checkFields() {
-            successLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
+            //successLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
             goToProfile()
         }
     }
@@ -59,10 +59,10 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
     func changePassword() {
         if profilView.checkFields() {
             if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password as old
-                successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
+                //successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
             } else {
                 RegisterUser.instance.user?.password = profilView.newPasswordTextField.text!
-                successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
+                //successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
             }
             profilView.newPasswordTextField.text = ""
             profilView.confirmNewPasswordTextField.text = ""
