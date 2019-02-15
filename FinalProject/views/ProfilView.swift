@@ -46,7 +46,15 @@ class ProfilView: UIView {
         let confirmNewPwdUnwrapped: String = confirmNewPasswordTextField.text ?? ""
         
         if (newPwdUnwrapped == "" || confirmNewPwdUnwrapped == "" || newPwdUnwrapped != confirmNewPwdUnwrapped) {
+            print(newPasswordTextField.text)
+            print(confirmNewPasswordTextField.text)
+            print(newPwdUnwrapped)
+            print(confirmNewPwdUnwrapped)
+        
             errorLabel.text = ErrorHandler.changePasswordInvalidPassword.getErrorMessage()
+            return false
+        } else if newPwdUnwrapped.count <= 5 {
+            errorLabel.text = ErrorHandler.passwordTooShort.getErrorMessage()
             return false
         }
         return true

@@ -1,6 +1,6 @@
 # Crew :
-Antoine Nivoy - 
-Pierre Hérissé
+### Antoine Nivoy
+### Pierre Hérissé
 
 
 ## Description du projet :
@@ -13,8 +13,8 @@ Pierre Hérissé
  ## Partie 3 : Ok ✅
  
  ## Bonus :
- ###     - Design different pour iPad : Ok ✅
- ###     - Afficher les messages d'erreurs sans print : Almost done ⏱
- ###     - Déplacer le contenu caché par le clavier : Not Yet ❌
- ###     - Ajouter une validation email & password : Almost done ⏱
- ###     - Easter egg pour jouer à Teris : Not Yet ❌
+ ####     - Design different pour iPad : Ok ✅
+ ####     - Afficher les messages d'erreurs sans print : Almost done ⏱
+ ####     - Déplacer le contenu caché par le clavier : Not Yet ❌
+ ####     - Ajouter une validation email & password : Ok ✅
+ ####     - Easter egg pour jouer à Teris : Not Yet ❌

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
         signInView.delegate = self
         signUpView.delegate = self
         profilView.delegate = self
+        
     }
     
     func goToLogin() {
@@ -59,9 +60,11 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
     func changePassword() {
         if profilView.checkFields() {
             if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password as old
+                print("Same password as old : \(profilView.newPasswordTextField.text)")
                 //successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
             } else {
                 RegisterUser.instance.user?.password = profilView.newPasswordTextField.text!
+                print("Correct new password : \(profilView.newPasswordTextField.text)")
                 //successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
             }
             profilView.newPasswordTextField.text = ""

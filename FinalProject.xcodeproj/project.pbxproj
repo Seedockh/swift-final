@@ -99,6 +99,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		629EC8A02216F03800B61E88 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				62FECC7B22157B6C00BA590A /* User.swift */,
+				62FECC7922157A5A00BA590A /* RegisterUser.swift */,
+				629EC89E2216A71C00B61E88 /* ErrorHandler.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		629EC8A12216F04700B61E88 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				62FECC70221552D200BA590A /* SignInViewDelegate.swift */,
+				62FECC72221552EC00BA590A /* SignUpViewDelegate.swift */,
+				62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		629EC8A22216F04D00B61E88 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				62FECC77221578B200BA590A /* ProfilView.swift */,
+				62FECC74221577EA00BA590A /* ProfilView.xib */,
+				62FECC6A22154F3200BA590A /* SignInView.swift */,
+				62FECC6822154F0500BA590A /* SignInView.xib */,
+				62FECC6E22154FB600BA590A /* SignUpView.swift */,
+				62FECC6C22154F8300BA590A /* SignUpView.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		62FECC2C22154D9D00BA590A = {
 			isa = PBXGroup;
 			children = (
@@ -123,24 +156,15 @@
 		62FECC3722154D9D00BA590A /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				629EC8A22216F04D00B61E88 /* views */,
+				629EC8A12216F04700B61E88 /* delegates */,
+				629EC8A02216F03800B61E88 /* models */,
 				62FECC3822154D9D00BA590A /* AppDelegate.swift */,
 				62FECC3C22154D9D00BA590A /* Main.storyboard */,
 				62FECC3F22154D9E00BA590A /* Assets.xcassets */,
 				62FECC4122154D9E00BA590A /* LaunchScreen.storyboard */,
 				62FECC4422154D9E00BA590A /* Info.plist */,
 				62FECC6622154E2F00BA590A /* LoginViewController.swift */,
-				62FECC6822154F0500BA590A /* SignInView.xib */,
-				62FECC6A22154F3200BA590A /* SignInView.swift */,
-				62FECC6C22154F8300BA590A /* SignUpView.xib */,
-				62FECC6E22154FB600BA590A /* SignUpView.swift */,
-				62FECC70221552D200BA590A /* SignInViewDelegate.swift */,
-				62FECC72221552EC00BA590A /* SignUpViewDelegate.swift */,
-				62FECC74221577EA00BA590A /* ProfilView.xib */,
-				62FECC77221578B200BA590A /* ProfilView.swift */,
-				62FECC7922157A5A00BA590A /* RegisterUser.swift */,
-				62FECC7B22157B6C00BA590A /* User.swift */,
-				62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */,
-				629EC89E2216A71C00B61E88 /* ErrorHandler.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";

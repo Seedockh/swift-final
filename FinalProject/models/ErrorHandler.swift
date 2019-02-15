@@ -10,6 +10,8 @@ enum ErrorHandler: Error {
     case changePasswordInvalidPassword
     case changePasswordSameAsOld
     case changePasswordSuccessful
+    case passwordTooShort
+    case emailBadFormat
     
     func getErrorMessage() -> String {
         switch self {
@@ -22,6 +24,8 @@ enum ErrorHandler: Error {
         case .changePasswordInvalidPassword: return "Passwords are not matching"
         case .changePasswordSameAsOld: return "New password isn't really new, is it..."
         case .changePasswordSuccessful: return "Password change is a success"
+        case .passwordTooShort: return "Password must be at least 6 character long"
+        case .emailBadFormat: return "Email must be at least 6 characters long, and must match a correct mail adress."
         }
     }
 }

@@ -44,7 +44,7 @@ class SignInView: UIView, SignInViewDelegate {
         let emailUnwrapped: String = emailTextField.text ?? ""
         let passwordUnwrapped: String = passwordTextField.text ?? ""
     
-        if (emailUnwrapped == "" || passwordUnwrapped == "" || emailUnwrapped != checkedUser.email || passwordUnwrapped != checkedUser.password) {
+        if (emailUnwrapped == "" || passwordUnwrapped == "" || emailUnwrapped != checkedUser.email || passwordUnwrapped != checkedUser.password ) {
             errorLabel.text = ErrorHandler.loginInvalidCredentials.getErrorMessage()
             return false
         }
