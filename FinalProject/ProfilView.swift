@@ -27,7 +27,8 @@ class ProfilView: UIView {
     
     func displayEmail() {
         emailDisplay.text = RegisterUser.instance.user?.email
-        print(emailDisplay)
+        //print(RegisterUser.instance.user?.email)
+        //print(emailDisplay.text)
     }
 
     func goToProfile(_ sender: UIButton) {

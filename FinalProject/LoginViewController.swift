@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
     func goToProfile() {
         signInView.isHidden = true
         signUpView.isHidden = true
-        profilView.emailDisplay()
+        profilView.displayEmail()
         profilView.isHidden = false
     }
     
