@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629EC89F2216A71C00B61E88 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629EC89E2216A71C00B61E88 /* ErrorHandler.swift */; };
 		62FECC3922154D9D00BA590A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FECC3822154D9D00BA590A /* AppDelegate.swift */; };
 		62FECC3E22154D9D00BA590A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62FECC3C22154D9D00BA590A /* Main.storyboard */; };
 		62FECC4022154D9E00BA590A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62FECC3F22154D9E00BA590A /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		629EC89E2216A71C00B61E88 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		62FECC3522154D9D00BA590A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62FECC3822154D9D00BA590A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62FECC3D22154D9D00BA590A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				62FECC7922157A5A00BA590A /* RegisterUser.swift */,
 				62FECC7B22157B6C00BA590A /* User.swift */,
 				62FECC7D2215AE0A00BA590A /* ProfilViewDelegate.swift */,
+				629EC89E2216A71C00B61E88 /* ErrorHandler.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				62FECC6F22154FB600BA590A /* SignUpView.swift in Sources */,
 				62FECC73221552EC00BA590A /* SignUpViewDelegate.swift in Sources */,
 				62FECC7C22157B6C00BA590A /* User.swift in Sources */,
+				629EC89F2216A71C00B61E88 /* ErrorHandler.swift in Sources */,
 				62FECC6B22154F3200BA590A /* SignInView.swift in Sources */,
 				62FECC7E2215AE0A00BA590A /* ProfilViewDelegate.swift in Sources */,
 				62FECC3922154D9D00BA590A /* AppDelegate.swift in Sources */,

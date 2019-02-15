@@ -5,6 +5,7 @@ class ProfilView: UIView {
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmNewPasswordTextField: UITextField!
     @IBOutlet weak var emailDisplay: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var delegate: ProfilViewDelegate?
     
@@ -23,32 +24,32 @@ class ProfilView: UIView {
         addSubview(profilView)
         profilView.frame = self.bounds
         profilView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        errorLabel.text = ErrorHandler.noError.getErrorMessage()
     }
     
     func displayEmail() {
         emailDisplay.text = RegisterUser.instance.user?.email
-        //print(RegisterUser.instance.user?.email)
-        //print(emailDisplay.text)
     }
 
     func goToProfile(_ sender: UIButton) {
+        errorLabel.text = ""
         delegate?.goToProfile()
     }
     
     @IBAction func changePassword() {
+        errorLabel.text = ""
         delegate?.changePassword()
     }
     
     func checkFields() -> Bool {
-        var checked: Bool = true
         let newPwdUnwrapped: String = newPasswordTextField.text ?? ""
         let confirmNewPwdUnwrapped: String = confirmNewPasswordTextField.text ?? ""
         
         if (newPwdUnwrapped == "" || confirmNewPwdUnwrapped == "" || newPwdUnwrapped != confirmNewPwdUnwrapped) {
-            print("Passwords are not matching")
-            checked = false
+            errorLabel.text = ErrorHandler.changePasswordInvalidPassword.getErrorMessage()
+            return false
         }
-        return checked
+        return true
     }
     
     @IBAction func logout() {

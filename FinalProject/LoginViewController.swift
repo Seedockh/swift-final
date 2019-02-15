@@ -5,6 +5,7 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
     @IBOutlet weak var signInView: SignInView!
     @IBOutlet weak var signUpView: SignUpView!
     @IBOutlet weak var profilView: ProfilView!
+    @IBOutlet weak var successLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,25 +44,25 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
             let password = signUpView.passwordTextField.text!
             let user: User = User(email: email, password: password)
             RegisterUser.instance.register(user: user)
-            print("Successful sign up !")
+            successLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
             signUpView.goToLogin()
         }
     }
     
     func login() {
         if signInView.checkFields() {
-            print("Successful login")
+            successLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
             goToProfile()
         }
     }
 
     func changePassword() {
         if profilView.checkFields() {
-            if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password
-                print("New password isn't really new, is it...")
+            if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password as old
+                successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
             } else {
                 RegisterUser.instance.user?.password = profilView.newPasswordTextField.text!
-                print("Password change is a success")
+                successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
             }
             profilView.newPasswordTextField.text = ""
             profilView.confirmNewPasswordTextField.text = ""

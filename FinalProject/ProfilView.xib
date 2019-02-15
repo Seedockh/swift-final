@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="confirmNewPasswordTextField" destination="Dws-f3-VWc" id="ZQM-A3-AEh"/>
                 <outlet property="emailDisplay" destination="tRm-hj-mjo" id="VYr-x3-mGE"/>
+                <outlet property="errorLabel" destination="6jg-xW-VRl" id="vIc-t5-3AX"/>
                 <outlet property="newPasswordTextField" destination="zRQ-zb-WpC" id="5Af-fD-RAF"/>
                 <outlet property="profilView" destination="iN0-l3-epB" id="kot-5J-iJZ"/>
             </connections>
@@ -25,96 +26,169 @@
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-zb-WpC">
                     <rect key="frame" x="16" y="112" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="sgX-Qo-S0z">
+                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                        </constraint>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    </variation>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dws-f3-VWc">
                     <rect key="frame" x="16" y="181" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Mhb-Mk-P0f">
+                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                        </constraint>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    </variation>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRS-du-jKf">
                     <rect key="frame" x="16" y="158" width="343" height="21"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    </variation>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-F0-065">
-                    <rect key="frame" x="16" y="243" width="343" height="40"/>
+                    <rect key="frame" x="16" y="263.5" width="343" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="NvL-oc-qWb"/>
+                        <constraint firstAttribute="height" constant="40" id="NvL-oc-qWb">
+                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                        </constraint>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                     <state key="normal" title="Change Password">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                    </variation>
                     <connections>
+                        <action selector="changePassword" destination="-1" eventType="touchUpInside" id="dbg-I4-0VS"/>
                         <action selector="changePassword" destination="-2" eventType="touchUpInside" id="yT6-VU-hgp"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-fR-cFG">
-                    <rect key="frame" x="16" y="299" width="343" height="40"/>
+                    <rect key="frame" x="16" y="319.5" width="343" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Gai-iU-h7h"/>
+                        <constraint firstAttribute="height" constant="40" id="Gai-iU-h7h">
+                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                        </constraint>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                     <state key="normal" title="Logout">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                    </variation>
                     <connections>
                         <action selector="logout" destination="-2" eventType="touchUpInside" id="uV8-y8-6DN"/>
+                        <action selector="logout" destination="-1" eventType="touchUpInside" id="zfa-u2-GKb"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCo-M6-tyo">
                     <rect key="frame" x="16" y="89" width="343" height="21"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRm-hj-mjo">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRm-hj-mjo">
                     <rect key="frame" x="322.5" y="36" width="36.5" height="21"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHI-eS-agP">
                     <rect key="frame" x="16" y="36" width="41" height="21"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                     <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-xW-VRl">
+                    <rect key="frame" x="16" y="227" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.058155415100000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0FX-qs-CWd"/>
-                <constraint firstItem="OHI-eS-agP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0j6-Zt-j5C"/>
+                <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0FX-qs-CWd">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
+                <constraint firstItem="OHI-eS-agP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0j6-Zt-j5C">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCo-M6-tyo" secondAttribute="trailing" constant="16" id="1m3-Nw-oyg"/>
                 <constraint firstItem="s4L-fR-cFG" firstAttribute="top" secondItem="PW5-F0-065" secondAttribute="bottom" constant="16" id="3Bh-Se-9PL"/>
-                <constraint firstItem="s4L-fR-cFG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6aM-DN-JT9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dws-f3-VWc" secondAttribute="trailing" constant="16" id="7G4-xp-HMK"/>
+                <constraint firstItem="s4L-fR-cFG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6aM-DN-JT9">
+                    <variation key="heightClass=regular-widthClass=regular" constant="256"/>
+                </constraint>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dws-f3-VWc" secondAttribute="trailing" constant="16" id="7G4-xp-HMK">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
                 <constraint firstItem="zRQ-zb-WpC" firstAttribute="top" secondItem="lCo-M6-tyo" secondAttribute="bottom" constant="2" id="7Mn-kK-vDf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BRS-du-jKf" secondAttribute="trailing" constant="16" id="AZv-ZI-u8E"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PW5-F0-065" secondAttribute="trailing" constant="16" id="Cz0-P1-58O"/>
+                <constraint firstItem="6jg-xW-VRl" firstAttribute="top" secondItem="Dws-f3-VWc" secondAttribute="bottom" constant="16" id="CS1-LD-WvQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PW5-F0-065" secondAttribute="trailing" constant="16" id="Cz0-P1-58O">
+                    <variation key="heightClass=regular-widthClass=regular" constant="256"/>
+                </constraint>
                 <constraint firstItem="OHI-eS-agP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ECk-is-LCS"/>
-                <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Iiq-4u-CTs"/>
-                <constraint firstItem="tRm-hj-mjo" firstAttribute="leading" secondItem="OHI-eS-agP" secondAttribute="trailing" constant="16" id="Khc-zB-Nhc"/>
-                <constraint firstItem="zRQ-zb-WpC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LxC-ug-g1p"/>
+                <constraint firstItem="lCo-M6-tyo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Iiq-4u-CTs">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
+                <constraint firstItem="zRQ-zb-WpC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LxC-ug-g1p">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tRm-hj-mjo" secondAttribute="trailing" constant="16" id="MCT-E5-CSb"/>
-                <constraint firstItem="BRS-du-jKf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PJQ-XX-KYg"/>
-                <constraint firstItem="Dws-f3-VWc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Q1y-GO-Crr"/>
+                <constraint firstItem="6jg-xW-VRl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Naf-IR-ozA"/>
+                <constraint firstItem="BRS-du-jKf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PJQ-XX-KYg">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
+                <constraint firstItem="Dws-f3-VWc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Q1y-GO-Crr">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6jg-xW-VRl" secondAttribute="trailing" constant="16" id="UPm-ml-Cxt"/>
+                <constraint firstItem="PW5-F0-065" firstAttribute="top" secondItem="6jg-xW-VRl" secondAttribute="bottom" constant="16" id="UxJ-Y8-qXy"/>
                 <constraint firstItem="OHI-eS-agP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="aJt-5V-hgY"/>
+                <constraint firstItem="tRm-hj-mjo" firstAttribute="leading" secondItem="OHI-eS-agP" secondAttribute="trailing" constant="16" id="dX3-Ik-v1n"/>
                 <constraint firstItem="Dws-f3-VWc" firstAttribute="top" secondItem="BRS-du-jKf" secondAttribute="bottom" constant="2" id="fbb-Lq-4mR"/>
                 <constraint firstItem="tRm-hj-mjo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="gwd-7R-Y8h"/>
-                <constraint firstItem="PW5-F0-065" firstAttribute="top" secondItem="Dws-f3-VWc" secondAttribute="bottom" constant="32" id="hQZ-fO-XsZ"/>
                 <constraint firstItem="tRm-hj-mjo" firstAttribute="height" secondItem="OHI-eS-agP" secondAttribute="height" id="mdI-Li-iG8"/>
                 <constraint firstItem="BRS-du-jKf" firstAttribute="top" secondItem="zRQ-zb-WpC" secondAttribute="bottom" constant="16" id="mdf-fN-4aB"/>
-                <constraint firstItem="PW5-F0-065" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="n3r-tc-esq"/>
+                <constraint firstItem="PW5-F0-065" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="n3r-tc-esq">
+                    <variation key="heightClass=regular-widthClass=regular" constant="256"/>
+                </constraint>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCo-M6-tyo" secondAttribute="trailing" constant="16" id="rrg-sz-GFT"/>
                 <constraint firstItem="zRQ-zb-WpC" firstAttribute="top" secondItem="lCo-M6-tyo" secondAttribute="bottom" constant="2" id="sv9-Go-tbM"/>
                 <constraint firstItem="lCo-M6-tyo" firstAttribute="top" secondItem="OHI-eS-agP" secondAttribute="bottom" constant="32" id="uRq-Bm-Wt8"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zRQ-zb-WpC" secondAttribute="trailing" constant="16" id="uz6-gz-S9M"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s4L-fR-cFG" secondAttribute="trailing" constant="16" id="zFP-ri-rYB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zRQ-zb-WpC" secondAttribute="trailing" constant="16" id="uz6-gz-S9M">
+                    <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                </constraint>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s4L-fR-cFG" secondAttribute="trailing" constant="16" id="zFP-ri-rYB">
+                    <variation key="heightClass=regular-widthClass=regular" constant="256"/>
+                </constraint>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="340" y="-104.7976011994003"/>

@@ -5,6 +5,7 @@ class SignUpView: UIView, SignUpViewDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var delegate: SignUpViewDelegate?
     
@@ -23,26 +24,28 @@ class SignUpView: UIView, SignUpViewDelegate {
         addSubview(signUpView)
         signUpView.frame = self.bounds
         signUpView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        errorLabel.text = ErrorHandler.noError.getErrorMessage()
     }
     
     @IBAction func goToLogin() {
+        errorLabel.text = ""
         delegate?.goToLogin()
     }
     
     @IBAction func register() {
+        errorLabel.text = ""
         delegate?.register()
     }
     
     func checkFields() -> Bool {
-        var checked: Bool = true
         let emailUnwrapped: String = emailTextField.text ?? ""
         let passwordUnwrapped: String = passwordTextField.text ?? ""
         let confirmPasswordUnwrapped: String = confirmPasswordTextField.text ?? ""
-        
         if (emailUnwrapped == "" || passwordUnwrapped == "" || confirmPasswordUnwrapped == "" || passwordUnwrapped != confirmPasswordUnwrapped) {
-            print("Email or password invalid !")
-            checked = false
+            errorLabel.text = ErrorHandler.registerInvalidCredentials.getErrorMessage()
+            return false
         }
-        return checked
+        errorLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
+        return true
     }
 }
