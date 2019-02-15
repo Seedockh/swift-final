@@ -48,7 +48,7 @@ class SignInView: UIView, SignInViewDelegate {
             errorLabel.text = ErrorHandler.loginInvalidCredentials.getErrorMessage()
             return false
         }
-        errorLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
+        //errorLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
         return true
     }
 }

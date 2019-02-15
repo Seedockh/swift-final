@@ -31,7 +31,7 @@ class ProfilView: UIView {
         emailDisplay.text = RegisterUser.instance.user?.email
     }
 
-    func goToProfile(_ sender: UIButton) {
+    func goToProfile() {
         errorLabel.text = ""
         delegate?.goToProfile()
     }
@@ -46,17 +46,13 @@ class ProfilView: UIView {
         let confirmNewPwdUnwrapped: String = confirmNewPasswordTextField.text ?? ""
         
         if (newPwdUnwrapped == "" || confirmNewPwdUnwrapped == "" || newPwdUnwrapped != confirmNewPwdUnwrapped) {
-            print(newPasswordTextField.text)
-            print(confirmNewPasswordTextField.text)
-            print(newPwdUnwrapped)
-            print(confirmNewPwdUnwrapped)
-        
             errorLabel.text = ErrorHandler.changePasswordInvalidPassword.getErrorMessage()
             return false
         } else if newPwdUnwrapped.count <= 5 {
             errorLabel.text = ErrorHandler.passwordTooShort.getErrorMessage()
             return false
         }
+        errorLabel.text = ""
         return true
     }
     

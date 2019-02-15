@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfilView" customModule="FinalProject" customModuleProvider="target">
             <connections>
-                <outlet property="confirmNewPasswordTextField" destination="Dws-f3-VWc" id="ZQM-A3-AEh"/>
+                <outlet property="confirmNewPasswordTextField" destination="Dws-f3-VWc" id="jGx-d6-2Jq"/>
                 <outlet property="emailDisplay" destination="tRm-hj-mjo" id="VYr-x3-mGE"/>
                 <outlet property="errorLabel" destination="6jg-xW-VRl" id="vIc-t5-3AX"/>
-                <outlet property="newPasswordTextField" destination="zRQ-zb-WpC" id="5Af-fD-RAF"/>
+                <outlet property="newPasswordTextField" destination="zRQ-zb-WpC" id="iGB-qr-izw"/>
                 <outlet property="profilView" destination="iN0-l3-epB" id="kot-5J-iJZ"/>
             </connections>
         </placeholder>
@@ -191,7 +191,7 @@
                 </constraint>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="340" y="-104.7976011994003"/>
+            <point key="canvasLocation" x="724" y="-349"/>
         </view>
     </objects>
 </document>

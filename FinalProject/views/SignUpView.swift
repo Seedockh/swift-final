@@ -51,7 +51,7 @@ class SignUpView: UIView, SignUpViewDelegate {
             errorLabel.text = ErrorHandler.passwordTooShort.getErrorMessage()
             return false
         }
-        errorLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
+        //errorLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
         return true
     }
     

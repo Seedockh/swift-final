@@ -20,7 +20,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbe-e3-OcQ" customClass="ProfilView" customModule="FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCp-BJ-Tfg">
+                                        <rect key="frame" x="16" y="313" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.30360014169999999" green="0.74779387949999998" blue="0.21530340479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="CCp-BJ-Tfg" firstAttribute="leading" secondItem="Gbe-e3-OcQ" secondAttribute="leading" constant="16" id="1w2-1z-B4k"/>
+                                    <constraint firstAttribute="trailing" secondItem="CCp-BJ-Tfg" secondAttribute="trailing" constant="16" id="Ra7-wZ-fhn"/>
+                                    <constraint firstAttribute="bottom" secondItem="CCp-BJ-Tfg" secondAttribute="bottom" constant="313" id="dda-0Q-mgr"/>
+                                    <constraint firstItem="CCp-BJ-Tfg" firstAttribute="top" secondItem="Gbe-e3-OcQ" secondAttribute="top" constant="313" id="vhd-Mc-4wF"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8x4-lb-YAD" customClass="SignInView" customModule="FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -52,6 +66,7 @@
                         <outlet property="profilView" destination="Gbe-e3-OcQ" id="UXv-Dx-el2"/>
                         <outlet property="signInView" destination="8x4-lb-YAD" id="UQs-9F-Idz"/>
                         <outlet property="signUpView" destination="Vsw-RY-DSx" id="QyT-gO-D0E"/>
+                        <outlet property="successLabel" destination="CCp-BJ-Tfg" id="4JH-mT-WRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

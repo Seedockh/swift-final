@@ -12,7 +12,32 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
         signInView.delegate = self
         signUpView.delegate = self
         profilView.delegate = self
+        let notifier = NotificationCenter.default
+        notifier.addObserver(self,
+                             selector: #selector(keyboardWillShowNotification(_:)),
+                             name: UIWindow.keyboardWillShowNotification,
+                             object: nil)
+        notifier.addObserver(self,
+                             selector: #selector(keyboardWillHideNotification(_:)),
+                             name: UIWindow.keyboardWillHideNotification,
+                             object: nil)
         
+    }
+    
+    @objc
+    func keyboardWillShowNotification(_ notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height - 370
+            }
+        }
+    }
+    
+    @objc
+    func keyboardWillHideNotification(_ notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     func goToLogin() {
@@ -45,14 +70,14 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
             let password = signUpView.passwordTextField.text!
             let user: User = User(email: email, password: password)
             RegisterUser.instance.register(user: user)
-            //successLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
+            successLabel.text = ErrorHandler.registerSuccessful.getErrorMessage()
             signUpView.goToLogin()
         }
     }
     
     func login() {
         if signInView.checkFields() {
-            //successLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
+            successLabel.text = ErrorHandler.loginSuccessful.getErrorMessage()
             goToProfile()
         }
     }
@@ -60,12 +85,10 @@ class LoginViewController: UIViewController, SignUpViewDelegate, SignInViewDeleg
     func changePassword() {
         if profilView.checkFields() {
             if RegisterUser.instance.user?.password == profilView.newPasswordTextField.text! { //same password as old
-                print("Same password as old : \(profilView.newPasswordTextField.text)")
-                //successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
+                successLabel.text = ErrorHandler.changePasswordSameAsOld.getErrorMessage()
             } else {
                 RegisterUser.instance.user?.password = profilView.newPasswordTextField.text!
-                print("Correct new password : \(profilView.newPasswordTextField.text)")
-                //successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
+                successLabel.text = ErrorHandler.changePasswordSuccessful.getErrorMessage()
             }
             profilView.newPasswordTextField.text = ""
             profilView.confirmNewPasswordTextField.text = ""
